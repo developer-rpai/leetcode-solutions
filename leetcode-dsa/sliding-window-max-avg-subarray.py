@@ -12,8 +12,10 @@ class Solution:
 
 
 
+
+
 sol = Solution()
-nums = [0,1,1,3,3]
+nums = [1,12,-5,-6,50,3]
 k = 4
 
 print(sol.findMaxAverage(nums,k))

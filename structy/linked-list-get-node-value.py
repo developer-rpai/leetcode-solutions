@@ -3,14 +3,23 @@ class Node:
     self.val = val
     self.next = None
 
-def linked_list_find(head, target):
+def get_node_value(head, index):
   current = head
-  
-  while current is not None:
-    if current.val == target:
-      return True
+  counter = 0
+
+  while current is not None:       
+    if counter == index:
+      return current.val
+    counter += 1
     current = current.next
-  return False
+
+  return None
+        
+    
+    
+
+
+
 
 
 a = Node("a")
@@ -24,9 +33,4 @@ c.next = d
 
 # a -> b -> c -> d
 
-print(linked_list_find(a, "a")) # True
-
-
- 
-
-
+print(get_node_value(a, 2)) # 'c'
